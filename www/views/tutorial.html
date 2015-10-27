@@ -1,0 +1,50 @@
+<style>
+    .arrows .prev {
+        transform: rotate(180deg);
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        margin: 25px;
+        z-index: 50;
+    }
+    
+    .arrows .next {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        margin: 25px;
+        z-index: 51;
+    }
+    
+    .arrows i {
+        vertical-align: middle;
+    }
+    
+    .slide {
+    /*display: none;*/
+    }
+    
+    md-whiteframe {
+      background: #fff;
+      margin: 30px;
+      height: 100px;
+    }
+    
+    .tutorialContent.ng-leave, .tutorialContent.ng-enter {
+    }
+    
+    
+    
+</style>
+<div class="slider">
+    
+    <div layout="row" layout-padding layout-wrap layout-fill ng-cloak class="tutorialContent" ng-include="slideFile"></div>
+    <!--<div ng-repeat="slide in slides" ng-show="currentSlider == $index">
+        Este es el slide: "{{$index}}"
+        {{slide}}
+    </div>-->
+    <div class="arrows">
+        <md-button class="md-fab prev" aria-label="Anterior" ng-click="prev()" ng-show="currentSlider > 0"><i class="mdi mdi-play"></i></md-button>
+        <md-button class="md-fab next" aria-label="Siguiente" ng-click="next()" ng-show="currentSlider < lastSlider"><i class="mdi mdi-play"></i></md-button>
+    </div>
+</div>

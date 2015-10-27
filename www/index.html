@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="Subitus_APP">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no"/>
+    <meta name="description" content="App e-learning"> 
+    <!--Iconos -->
+    <link href="styles/materialdesignicons.min.css" media="all" rel="stylesheet" type="text/css" />
+    <!--Estilos-->
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
+    <link rel="stylesheet" type="text/css" href="styles/app.css">
+      <!--<script type="text/javascript" charset="utf-8" src="cordova.js"></script>-->
+  </head>
+
+  <body layout="row" ng-controller="AppCtrl">
+
+    <!--Slide de navegación -->
+    <md-sidenav layout="column" class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')" ng-if="userData.isLogged">
+      <!--Barra top en el slide-->
+      <md-toolbar class="md-tall md-hue-2">
+        <div layout="column" class="md-toolbar-tools-bottom inset">
+          <div>{{system.data.firstname}} {{system.data.lastname}}</div>
+        </div>
+      </md-toolbar>
+      <!--Lista de botones-->
+      <md-list>
+      <md-item ng-repeat="item in menu">
+        <a ng-href = "#/{{item.link}}" ng-click="close()">
+          <md-item-content md-ink-ripple layout="row" layout-align="start center">
+            <div class="inset">
+              <i class="mdi mdi-{{item.icon}}"></i>
+            </div>
+            <div class="inset">{{item.title}}
+            </div>
+          </md-item-content>
+        </a>
+      </md-item>
+      <md-divider></md-divider>
+      <md-item>
+        <a ng-click="sincronizar()">
+          <md-item-content md-ink-ripple layout="row" layout-align="start center">
+            <div class="inset">
+              <i class="mdi mdi-sync"></i>
+            </div>
+            <div class="inset">Sincronizar
+            </div>
+          </md-item-content>
+        </a>
+      </md-item>
+    </md-list>
+    </md-sidenav>
+
+    <div layout="column" class="relative" layout-fill role="main">
+      <!--Barra superior -->
+      <md-toolbar>
+        <div class="md-toolbar-tools">
+          <!--Botón menu-->
+          <md-button ng-click="toggleSidenav('left')" hide-gt-md aria-label="Menu" ng-if="userData.isLogged">
+            <i class="mdi mdi-menu"></i>
+          </md-button>
+          <!--Texto de navegación -->
+          <h1 ng-show = "$location.path() == '/login'" class= "txtNav">
+            {{system.pageTitle}}
+          </h1>
+          <h1 ng-show = "$location.path() == '/cursos'" class= "txtNav">
+            {{system.pageTitle}}
+          </h1>
+          <h1 ng-show = "$location.path() == '/top10'" class= "txtNav">
+            Top 10
+          </h1>
+          <h1 ng-show = "$location.path() == '/configuracion'" class= "txtNav">
+            Configuración
+          </h1>
+          <!-- Botón de opciones -->
+          <span flex></span>
+          <md-button aria-label="Open Settings" ng-click="showListBottomSheet($event)" ng-if="userData.isLogged">
+            <i class="mdi mdi-dots-vertical"></i>
+          </md-button>
+        </div>
+      </md-toolbar>
+
+      <!--Contenido-->
+      <md-content flex md-scroll-y>
+        <!--Peloader-->
+        <md-progress-linear md-mode="indeterminate" ng-hide="!layout.loading"></md-progress-linear>
+        <div ng-view class="fade" ></div>
+      </md-content>
+    </div>
+    <!-- Angular Material Dependencias -->
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-aria/angular-aria.js"></script>
+    <script src="bower_components/angular-material/angular-material.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/Chart/Chart.min.js"></script>
+    <script src="bower_components/angular-chart/angular-chart.js"></script>
+
+    <!-- Script's -->
+    <script type="text/javascript" src="scripts/app.js"></script>
+    <script src="scripts/authentication.service.js"></script>
+    <script src="scripts/login.controller.js"></script>
+    <script src="scripts/courses.controller.js"></script>
+    <script src="scripts/tutorial.controller.js"></script>
+  </body>
+</html>

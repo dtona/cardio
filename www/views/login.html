@@ -1,0 +1,39 @@
+<style type="text/css">
+
+	.carddemoBasicUsage md-card {
+  		min-height: 150px; 
+  	}
+
+  	.opc {
+  -webkit-transition:all linear 0.5s;
+  transition:all linear 0.5s;
+  -webkit-transition-delay: 0.5s; /* Safari */
+  transition-delay: 0.5s;
+
+}
+
+.opc.ng-hide {
+  opacity:0;
+}
+</style>
+
+<md-card>
+    
+    <md-card-content>
+    	<md-input-container md-no-float>
+			<label>Usuario</label>
+      		<input ng-model="vm.username" type="text" required>
+    	</md-input-container>
+    	<md-input-container md-no-float>
+			<label>Contraseña</label>              
+			<input class="input" ng-model="vm.password" type="password" required>
+    	</md-input-container>
+
+    	<div class="opc">
+    		<md-button ng-disabled="form.$invalid || vm.dataLoading" ng-click="vm.login()" class="md-raised md-primary">Iniciar Sesión</md-button>
+            <img ng-if="vm.dataLoading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+    	</div>
+
+   	</md-card-content>
+
+</md-card>

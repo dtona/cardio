@@ -1,0 +1,106 @@
+/* Iconos ===========================================*/
+.mdi{
+  font-size: 25px;
+} 
+
+/* Estilos generales==================================*/
+
+h1{
+  font-weight: normal;
+}
+
+h2 {
+  color: #7C7C7C;
+  font-weight: normal;
+  font-size: 1.20em;
+}
+
+h4 {
+  font-weight: normal;
+  font-size: 1.10em;
+}
+
+a{
+  text-decoration: none;
+  color: #0277bd;
+}
+
+p{
+  font-weight: 300;
+}
+
+md-content.md-default-theme {
+  background-color: #eee;
+}
+
+md-card {
+  background-color: #fff;
+}
+
+md-card h2:first-of-type {
+  margin-top: 0;
+}
+
+md-toolbar .md-button.md-default-theme {
+  border-radius: 99%;
+}
+
+.md-toolbar-tools-bottom {
+  font-size: small;
+}
+
+.md-toolbar-tools-bottom :last-child {
+  opacity: 0.8;
+}
+/*
+Color slidevar: #0277bd
+Color barra superior: #03a9f4
+*/
+
+/* Animacion views ===================================*/
+
+.fade {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+}
+.fade.ng-enter,
+.fade.ng-leave {
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+}
+.fade.ng-enter {
+    opacity: 0;
+}
+.fade.ng-enter-active {
+    opacity: 1;
+}
+.fade.ng-leave {
+    opacity: 1;
+}
+.fade.ng-leave-active {
+    opacity: 0;
+}
+
+/* Pantalla: inicio ===================================*/
+
+#radar{}
+
+
+/* Texto de navegación ===================================*/
+.txtNav {
+  -webkit-transition:all linear 0.20s;
+  transition:all linear 0.20s;
+  -webkit-transition-delay: 1.25s; /* Safari */
+  transition-delay: 1.25s;
+}
+
+.txtNav.ng-hide {
+    -webkit-transition-delay: 0s; /* Safari */
+  transition-delay: 0s;
+  opacity:0;
+}

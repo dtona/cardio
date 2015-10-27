@@ -1,0 +1,159 @@
+<style type="text/css">
+  
+	.carddemoBasicUsage md-card {
+  		min-height: 150px; 
+  	}
+  	
+    md-card-content{
+      margin-top: -25px;
+      margin-bottom: -10px;
+    }
+
+    .aux{
+      margin-top: -20px;
+      text-align:justify;
+      line-height: 120%;
+    }
+
+    .irCurso{
+      color:#03a9f4;
+      width: 100%;
+      text-align: left;
+    }
+
+    .cerrarCurso{
+      color:#03a9f4;
+      position: relative;
+      float: right;
+      top:0px;
+    }
+
+    .error01{
+      margin-top: 10px;
+      color:red;
+    }
+    .btnCurso{
+      width: 100%;
+      text-align: left;
+      padding: 15px;
+      font-weight: 300;
+      margin-top: 10px;
+      text-transform: none;
+    }
+
+    .btnCurso:not([disabled]):hover {
+  color: #0277bd;
+}
+
+.md-fab.actualizar{
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+}
+
+.fadeOpc0 {
+  -webkit-transition:all linear 0.5s;
+  transition:all linear 0.5s;
+  -webkit-transition-delay: 0.5s; /* Safari */
+  transition-delay: 0.5s;
+
+}
+
+.fadeOpc0.ng-hide {
+  opacity:0;
+}
+
+.fadeOpc2 {
+  -webkit-transition:all linear 0.5s;
+  transition:all linear 0.5s;
+}
+
+.fadeOpc2.ng-hide {
+  -webkit-transition-delay: 0s; /* Safari */
+  transition-delay: 0s;
+  -webkit-transition: linear 0s;
+  transition: linear 0s;
+  opacity:0;
+}
+
+</style>
+
+<div ng-repeat="curso in collecionCursos">
+  <md-card>
+  			      <img ng-src="{{curso.imagen}}" class="md-card-image" alt="Washed Out">
+  			      <md-card-content>
+  			        <h4>{{curso.nombre}}</h4>
+  			        <p class="aux">{{curso.descripcion}}</p>
+               <md-divider></md-divider>
+
+                <md-button class = "irCurso fadeOpc0" aria-label="Ir curso" ng-show="opciones[$index] == false" ng-click="cambiaValorTrue($index)">Mostrar</md-button>
+
+
+                <md-button class = "cerrarCurso fadeOpc0" aria-label="Cerrar" ng-show="opciones[$index] == true" ng-click="cambiaValorFalse($index)"><i class="mdi mdi-close"></i></md-button>
+              
+
+          <div class = "fadeOpc2" ng-show="opciones[$index] == true">
+
+              <div class="error01" ng-show="noExistenArchivos($index)">No hay archivos.</div>
+
+              <md-button aria-label="Boton PDF" ng-show="existeArchivoPDF($index) == true" ng-click="abrirPDFs($index)"><i class="mdi mdi-file-pdf"></i></md-button>
+              <md-button aria-label="Boton Curso" ng-show="existeArchivoMovie($index)== true" ng-click="abrirMovies($index)"><i class="mdi mdi-folder"></i>
+              </md-button>
+              <md-button aria-label="Boton Audio" ng-show="existeArchivoAudio($index)== true" ng-click="abrirAudios($index)"><i class="mdi mdi-volume-high"></i></md-button>
+
+
+              <div ng-show="opcPDFs[$index] == true">
+                <md-list>
+                  <md-list-item class="md-3-line" ng-repeat="pdf in curso.pdf">
+                      <div>
+                       <md-button aria-label="PDF" class= "btnCurso">{{pdf.nombre}}</md-button>
+                      </div>
+                  </md-list-item>
+                </md-list>
+              </div>
+
+              <div ng-show="opcMovies[$index] == true">
+                <md-list>
+                  <md-list-item class="md-3-line" ng-repeat="movie in curso.movies">
+                      <div>
+                       <md-button aria-label="Movie" class= "btnCurso">{{movie.nombre}}</md-button>
+                      </div>
+                  </md-list-item>
+                </md-list>
+              </div>
+
+              <div ng-show="opcAudios[$index] == true">
+                <md-list>
+                  <md-list-item class="md-3-line" ng-repeat="audio in curso.audio">
+                      <div>
+                       <md-button aria-label="Audio" class= "btnCurso">{{audio.nombre}}</md-button>
+                      </div>
+                  </md-list-item>
+                </md-list>
+              </div>
+
+          </div>
+
+  			      </md-card-content>
+  			</md-card>
+        <div ng-if="!($last)">
+              <br/>
+            </div>
+</div>
+
+
+
+
+
+<!--
+
+<md-card ng-repeat="curso in collecionCursos">
+      <img ng-src="{{curso.imagen}}" class="md-card-image" alt="Washed Out">
+      <md-card-content>
+        <h2 class="md-title">{{curso.nombre}}</h2>
+        <p>
+          {{curso.descripcion}}
+        </p>
+      </md-card-content>
+</md-card>
+-->

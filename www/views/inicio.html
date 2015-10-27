@@ -1,0 +1,69 @@
+<!--Estilos de la gráfica principal-->
+<link rel="stylesheet" href="/bower_components/angular-chart/dist/angular-chart.css">
+<style type="text/css">
+
+	.carddemoBasicUsage md-card {
+  		min-height: 150px; 
+  	}
+	/* Barras de progreso individual */
+
+	.progress {
+		background-color: #6495ED;
+		height:27px;
+		margin-bottom:2%;
+		margin-top: -20px;
+		overflow:hidden;
+	}
+
+	.bar {
+		background-color: #0277bd;
+		color:#fff;
+		float:left;
+		height:100%;
+		position:relative;
+		text-align:left;
+	}
+
+	.bar > .percent {
+		font-size:.9rem;
+		left:8px;
+		position:absolute;
+		top:3px;
+	}
+
+	.goal {
+		font-weight: 300;
+	}
+
+	
+</style>
+
+<md-card>
+    <md-card-content>
+    <h2>Gráfica del progreso global</h2>
+	<br/>
+	<canvas id="radar" class="chart chart-radar" data="datos" labels="nombres"></canvas>
+    	<section>
+			<md-divider></md-divider>
+			<br/>
+	    	<h2>Gráfica del progreso individual</h2>
+
+			<div ng-repeat="item in progressData">
+	        	<h4>{{item.nombre}}</h4>
+	        	<div class="progress">
+	            	<div class="bar" ng-style="{width:{{((item.puntosObtenidos / item.puntosTotales) * 100)}} + '%'}">
+	                	<span class="percent" ng-show="((item.puntosObtenidos / item.puntosTotales) * 100) <= 100">{{((item.puntosObtenidos / item.puntosTotales) * 100) | number:0}}%</span>
+	                	<span class="percent" ng-show="((item.puntosObtenidos / item.puntosTotales) * 100) > 100">100%</span>
+	            	</div>
+	        	</div>
+		        <span class="goal">Puntos obtenidos: {{item.puntosObtenidos}}<br/>Puntos totales: {{item.puntosTotales}}</span>
+		        <div ng-if="!($last)">
+		        	<br/>
+		        </div>
+	    	</div>
+		</section>
+
+
+
+   	</md-card-content>
+</md-card>

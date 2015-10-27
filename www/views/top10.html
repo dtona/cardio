@@ -1,0 +1,25 @@
+<style type="text/css">
+  
+  .whiteframedemoBasicUsage md-whiteframe {
+  background: #fff;
+  margin: 10px;
+  padding: 10px; 
+}
+
+</style>
+
+<div layout="column"  class="whiteframedemoBasicUsage">
+
+  <md-whiteframe class="md-whiteframe-z1" layout="" layout-align="left center" ng-repeat="persona in topTen">
+      
+<table style = "width:125%">
+			<tr>
+		    	<td>{{persona.lugar}}. {{persona.nombre}}</td>
+		    	<td>{{persona.puntos}} puntos</td>
+		 	</tr>
+		</table>
+
+
+  </md-whiteframe>
+
+</div>

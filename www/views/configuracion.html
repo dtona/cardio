@@ -1,0 +1,52 @@
+<style type="text/css">
+
+	.carddemoBasicUsage md-card {
+  		min-height: 150px; 
+  	}
+
+  	.opc {
+  -webkit-transition:all linear 0.5s;
+  transition:all linear 0.5s;
+  -webkit-transition-delay: 0.5s; /* Safari */
+  transition-delay: 0.5s;
+
+}
+
+.opc.ng-hide {
+  opacity:0;
+}
+</style>
+
+<md-card>
+    
+    <md-card-content>
+    	<md-input-container md-no-float>
+			<label>Nombre</label>
+      		<input ng-model="usuario.nombre" type="text" disabled>
+    	</md-input-container>
+    	<md-input-container md-no-float>
+			<label>Apellidos</label>
+      		<input ng-model="usuario.apellido" type="text" disabled>
+    	</md-input-container>
+    	<md-input-container md-no-float>
+			<label>Correo</label>
+      		<input ng-model="usuario.correo" type="text" disabled>
+    	</md-input-container>
+    	<md-input-container md-no-float>
+			<label>Contraseña</label>              
+			<input class = "input"ng-model="passUsuario" type="password">
+    	</md-input-container>
+		<div ng-show="cambiarPass()" class="opc">
+	    	<md-input-container md-no-float>
+				<label>Verificar contraseña</label>
+	      		<input ng-model="nuevoPass" type="password">
+	    	</md-input-container>
+    	</div>
+
+    	<div ng-show="sonIguales()" class="opc">
+    		<md-button ng-click="guardarPass()">Guardar</md-button>
+    	</div>
+
+   	</md-card-content>
+
+</md-card>
