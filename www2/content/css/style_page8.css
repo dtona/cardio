@@ -1,0 +1,242 @@
+.page{
+    position: absolute;
+/*
+    padding-top: 20%;*/
+    height: 75%;
+    width: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+.line1{
+    text-align: center;
+    font-family: Montserrat, sans-serif;
+    color: #56b7ff;
+}
+.line3{
+    text-align: left;
+    font-family: Montserrat, sans-serif;
+    color: #FFF;
+    font-size: 1.1em;
+}
+.line4{
+    text-align: left;
+    font-family: Montserrat, sans-serif;
+    font-size: 1.0em;
+    color: #FFF;
+}
+.line5{
+    text-align: left;
+    font-family: Montserrat, sans-serif;
+    font-size: 1.0em;
+    color: #FFF;
+}
+.bloque-skills{
+    margin-bottom: 15px;
+}
+.text-holder{
+    margin-top: -30px;
+}
+.text-info{
+    margin-bottom: 20px;
+}
+.text-center{
+    text-align: center;
+}
+.imagen_center{
+    margin-top: 50px;
+}
+.imagen_center img{
+    width: 40%;
+}
+.text-left{
+    text-align: left;
+}
+.text-right{
+    text-align:right;
+}
+.row{
+    padding-bottom: 20px;
+}
+.page{
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+
+.objeto{
+    opacity: 0;
+}
+
+@media (max-width: 479px) {
+	    .imagen_center img{
+        width: 30%;
+    }
+    
+
+    
+    .page{
+        overflow-y:auto;
+        
+    }
+    
+::-webkit-scrollbar{
+  width:0px;
+display: none;
+}     
+    
+    
+::-webkit-scrollbar-thumb{
+     width:0px;
+   background-color: rgba(255,255,255,255);
+
+}     
+    
+::-webkit-scrollbar-track-piece   {
+    width:0px;
+
+}      
+    
+}
+@media (min-width: 480px) {
+	    .imagen_center img{
+        width: 20%;
+    }
+    .page{
+              overflow-y:auto;
+    }
+    
+::-webkit-scrollbar{
+  width:0px;
+  display: none;
+    
+}     
+    
+::-webkit-scrollbar-thumb{
+     width:0px;
+   background-color: rgba(255,255,255,255);
+
+}     
+    
+::-webkit-scrollbar-track-piece   {
+    width:0px;
+
+}     
+    
+}
+@media (min-width: 600px) {
+    .page{
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    }
+    .line3{
+        text-align: left;
+    }
+    .line4{
+        text-align: left;
+    }
+    .line5{
+        text-align: left;
+    }
+    p , span{
+        text-align: left;
+    }
+	    .imagen_center img{
+        width: 20%;
+    }
+}
+@media (min-width: 768px) {
+    .row{
+        padding-top: 70px;
+    }
+    #text1{
+        padding: 50px 30px 10px 30px;
+    }
+    .imagen_center img{
+        width: 80%;
+    }
+    .imagen_center{
+    padding: 0;
+    }
+    #img1{
+        text-align:left;
+    }
+    .page{
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    }
+    .line4{
+        padding-top: 20px;
+    }
+    .line5{
+        padding-top: 20px;
+    }
+}
+@media (min-width: 992px) {
+    .row{
+        padding-top: 30px;
+    }
+    .line4{
+        padding-top: 5px;
+        padding-bottom: 15px;
+    }
+    .line5{
+        padding-top: 5px;
+        padding-bottom: 15px;
+    }
+    .page{
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+    }
+    .bloque-skills{
+        margin: 0px;
+        margin: 0px;
+    }
+    .imagen_center{
+        margin: 0;
+        padding: 0;
+    }
+    .img3{
+        margin-top: 30px;
+    }
+    .text-holder{
+        padding-top: 40px;
+    }
+    .text-info{
+        margin-bottom: 90px;
+    }
+	 .imagen_center img{
+        width: 60%;
+    }
+}
+@media (min-width: 1200px) {
+    .line4{
+        font-size: 1.1em;
+    }
+    .line5{
+        font-size: 1.09em;
+    }    
+	 .imagen_center img{
+        width: 50%;
+    }
+}
+body{
+    background-color: #F4F4F4;
+    overflow: hidden;
+}
+
+.bg1{
+    background: url(../images/bg1.png) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.bg2{
+    background: url(../images/bg2.png) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}

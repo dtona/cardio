@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/TweenMax.min.js"></script>
+
+    <title>Page 24</title>
+
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.css" rel="stylesheet">
+    <link href="css/style_page6.css" rel="stylesheet">
+
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700|Source+Sans+Pro:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+   
+  <body class="bg1" onresize="location.reload()">
+
+  	<div class="page" >
+	  	<div class="container">      
+	        <div class="row" >
+                <div class="col-xs-12 col-sm-3 visible-xs imagen_center text-center objeto" id="bloque1">
+                    <img class="" src="images/doc3-cicle.png" alt="">
+                </div>
+                <div class="col-xs-12 col-sm-9 text-center imagen_center visible-xs visible-sm objeto" id="bloque2">
+                    <h2 class="text-holder line1 ">Médico de Urgencias responsable del Código infarto en la Unidad Médica con sala de hemodinamia</h2>
+                    
+                </div>
+                
+                
+                <div class="col-md-4 visible-md visible-lg imagen_center text-center objeto" id="bloque3">
+                    
+                    <h2 class="text-holder line1 ">Médico de Urgencias responsable del Código infarto en la Unidad Médica con sala de hemodinamia</h2>
+                
+                    <img class="objeto" id="bloque4" src="images/doc3-dummy.png" alt="">
+                </div>
+                
+                <div class="col-sm-3 visible-sm imagen_center text-center objeto" id="bloque5">
+                    <img class="" src="images/doc3-cicle.png" alt="">
+                </div>
+                
+                <div class="col-xs-12 col-md-8 objeto" id="bloque6">
+                
+                    <div class="col-xs-8 col-sm-8 col-md-8 objeto" id="bloque7">
+                        <p class="line4">Las <strong>indicaciones no farmacológicas</strong> son:</p>
+                    </div>
+
+                    <div class="clearfix"></div>
+
+                    <br>
+                    <div class="col-xs-4 col-sm-3 col-md-2 text-right objeto" id="bloque8">
+                        <img src="images/icon-estomago.png" width="80" alt="">
+                    </div>
+                    
+                    <div class="col-xs-8 col-sm-9 col-md-6 objeto" id="bloque9">
+                        <p class="line4">El paciente deberá mantenerse en ayuno.</p><br>
+                    </div>
+
+                    <div class="clearfix"></div>
+                    <br>
+                    <div class="col-xs-4 col-sm-3 col-md-2 text-right objeto" id="bloque10">
+                        <img src="images/icon-bisturi.png" width="80" alt="">
+                    </div>
+                    
+                    <div class="col-xs-8 col-sm-9 col-md-6 objeto" id="bloque11">
+                        <p class="line4">Realizar limpieza y tricotomía de la región para el acceso vascular, ya sea radial o femoral, de acuerdo con el protocolo establecido en cada UMAE.</p><br>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+			</div>
+        </div>  
+    </div>  
+      <br><br>
+      
+  	<script>
+        
+    var bloques = 11;
+    $(document).ready(function(){
+            for (i = 1; i <= bloques; i++) { 
+                TweenMax.fromTo($("#bloque"+i),1,{alpha:0},{alpha:1, ease:Quart.easeOut, delay:1+(i*.3)});
+            }
+        });
+    </script>
+
+  </body>
+</html>

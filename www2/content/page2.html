@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/TweenMax.min.js"></script>
+      
+    <title>Page 2</title>
+
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.css" rel="stylesheet">
+    <link href="css/style_general.css" rel="stylesheet">
+    <link href="css/style_page2.css" rel="stylesheet">
+
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700|Source+Sans+Pro:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body class="bg1" onresize="location.reload()">
+
+  	<div class="page">
+        <div class="corrector">
+            <div class="container">      
+                <div class="row">
+                    <div class="col-md-2">
+                    </div>
+                    <div class="col-xs-12 col-sm-3 col-md-2 ">
+                        <div class="imagen objeto" id="bloque1">
+                            <img src="images/diana.png" width="180" alt="">
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-8 col-md-6">
+                        <h2 class="line1 objeto" id="bloque2">Objetivo</h2>                    
+                        <h3 class="line2 objeto" id="bloque3">Al término de este Tutorial, <br class="onlyMovile">usted será capaz de:</h3>
+                        <p class="line3 objeto" id="bloque4">Reconocer las funciones principales de todo el personal médico y no médico que participa en el Código infarto para hacer más eficiente la toma de decisiones de tratamiento de los pacientes con infarto agudo del miocardio con elevación del segmento ST (IAMCEST).</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>  
+
+  	<script>
+    $(document).ready(function(){
+        console.log("leyó");
+        TweenMax.fromTo($("#bloque1"),1,{alpha:0},{alpha:1, ease:Quart.easeOut, delay:1});
+        TweenMax.fromTo($("#bloque2"),1,{alpha:0},{alpha:1, ease:Elastic.easeOut, delay:1.4});
+        TweenMax.fromTo($("#bloque3"),1,{alpha:0},{alpha:1, ease:Cubic.easeOut, delay:1.8});
+        TweenMax.fromTo($("#bloque4"),1,{alpha:0},{alpha:1, ease:Cubic.easeOut, delay:2});
+    });
+    </script>
+  </body>
+</html>

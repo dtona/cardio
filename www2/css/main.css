@@ -1,0 +1,256 @@
+
+@media only screen and (min-width:769px) {
+       html, body {
+        
+        margin: 0 auto;
+        max-width: 1260px;
+        min-width: 1024px;
+        
+       }
+   .fijo {
+       max-width: 1260px;
+        min-width: 1024px;
+       position:fixed !important; 
+       margin: 0 auto; 
+       width: 100%; 
+       bottom:0px; 
+       z-index:10 !important
+   } 
+    .contenedor{
+        height: 550px;
+        position: relative;
+        
+    }
+    .contenido {
+        margin: 0 auto;
+        width: 90%;
+        position: absolute;
+        left: 50%;
+        top: 43%;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+    }
+    
+    .imgheader {
+        width: 260px;
+        float:left;
+    }
+    
+    .txtheader {
+        width: 60%;
+        margin-top: 8px;
+        
+    }
+    
+    .caso {
+        width: 15%;  
+        margin: 20px;
+    }
+    
+    .cont-casos{
+       
+        width: 90%;
+    }
+    
+    .titulo {
+        width: 25%;   
+    }
+    
+    .instrucciones {
+        width: 50%;   
+    }
+    object {
+        width: 1000px;
+        height: 500px;
+    }
+
+    h1{
+     font-size: 1.4em;   
+    }
+	 h3{
+     font-size: 1.2em;   
+    }
+    
+    .panelMovil1{
+        width: 33%;
+        
+    }
+     .panelMovil2{
+        width: 33%;
+    }
+     .panelMovil3{
+        width: 33%;
+    }
+}
+
+
+
+
+@media only screen and (min-width:481px) and (max-width:768px) {
+    h1{
+     font-size: 1em;   
+    }
+    h3{
+     font-size: .7em;   
+    }
+    p{
+        font-size:.7em;
+    }
+    body {
+        margin: 0 auto;
+        max-width: 100%;
+        min-width: 100%;
+        background-color: #fff;
+       }
+    
+    .fijo {
+       position:fixed !important; 
+       margin: 0 auto; 
+       width: 100%; 
+       bottom:0px; 
+       z-index:10 !important
+   }
+     .contenedor{
+        height: 750px;
+        position: relative;
+        
+    }
+    .contenido {
+        margin: 0 auto;
+        width: 90%;
+        position: absolute;
+        left: 50%;
+        top: 43%;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+    }
+     object {
+        width: 480px;
+        height: 360px;
+    }
+    .subtit{
+        width: 480px;
+        margin-top: -100px;
+        position: relative;
+        background-color: rgba(255, 255, 255, 0.5);
+        font-size: .8em;
+    }
+     .imgheader {
+        width: 200px;
+        float: left;
+    }
+    
+    .txtheader {
+        width: 58%;
+        margin-top: 4px;
+    }
+    
+    .contenido {
+        margin: 0 auto;
+        width: 90%;   
+    }
+    
+     .caso {
+        width: 25%;  
+        margin: 10px;
+        float: left;
+    }
+    
+    .cont-casos{
+       
+        width: 90%
+    }
+    .titulo {
+        width: 50%;   
+    }
+    
+    .instrucciones {
+        width: 50%;   
+    }
+    
+        .panelMovil1{
+        display: none;
+        
+    }
+     .panelMovil2{
+       
+        float: left;
+        width: 50%;
+    }
+     .panelMovil3{
+        font-size: .6em;
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width:480px) {
+     h1{
+     font-size: 1.2em;   
+    }
+    h3{
+     font-size: .8em;   
+    }
+    
+    p{
+        font-size:.7em;
+    }
+    body {
+        
+        margin: 0 auto;
+        max-width: 100%;
+        min-width: 100%;
+        background-color: #fff;
+       }
+     object {
+        width: 300px;
+        height: 240px;
+    }
+    
+    .subtit{
+        width: 300px;
+        margin-top: -100px;
+        position: relative;
+        background-color: rgba(255, 255, 255, 0.5);
+        font-size: .7em;
+    }
+     .imgheader {
+        width: 300px;
+        float: left;
+    }
+    
+    .txtheader {
+        width: 100%;
+         margin-top: 24px;
+    }
+    
+    .contenido {
+        margin: 0 auto;
+        width: 90%;   
+    }
+     .caso {
+       
+        width: 40%;  
+        margin: 10px;
+    }
+    .titulo {
+        width: 100%;   
+    }
+    
+    .instrucciones {
+        width: 100%;   
+    }
+    .panelMovil1{
+        display: none;
+        
+    }
+     .panelMovil2{
+       
+        float: left;
+        width: 35%;
+    }
+     .panelMovil3{
+       font-size: .6em;
+        width: 65%;
+    }
+     
+}

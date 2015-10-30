@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/TweenMax.min.js"></script>
+
+    <title>Page 12</title>
+
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.css" rel="stylesheet">
+    <link href="css/style_page8.css" rel="stylesheet">
+
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700|Source+Sans+Pro:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+   
+  <body class="bg2" onresize="location.reload()">
+
+  	<div class="page" >
+	  	<div class="container">      
+	        <div class="row" >
+                <div class="col-xs-12 col-sm-3 visible-xs imagen_center text-center objeto" id="bloque1">
+                    <img class="" src="images/doc2-cicle.png" alt="">
+                </div>
+                <div class="col-xs-12 col-sm-9 text-center imagen_center visible-xs visible-sm objeto" id="bloque2">
+                    <h2 class="text-holder line1 ">Médico asignado al Triage</h2>
+                </div>
+                
+                
+                <div class="col-md-4 visible-md visible-lg imagen_center text-center objeto" id="bloque3">
+                    
+                    <h2 class="text-holder line1 ">Médico asignado al Triage</h2>
+                    <img class="objeto" id="bloque4" src="images/doc2-dummy.png" alt="">
+                </div>
+                
+                <div class="col-sm-3 visible-sm imagen_center text-center objeto" id="bloque5">
+                    <img class="" src="images/doc2-cicle.png" alt="">
+                </div>
+                <div class="clearfix visible-xs visible-sm"></div>
+                
+                <div class="col-xs-12 col-md-8">
+                    
+                <div class="col-xs-12 col-md-8 objeto" id="bloque6">
+                    <p class="line4">Cuando el personal de Vigilancia le notifique que llegó un paciente que presenta dolor torácico, dificultad respiratoria y/o pérdida del conocimiento:</p>
+                </div>
+                
+                     <div class="clearfix"></div>
+                    
+                <div class="col-xs-4 col-sm-3 col-md-2 text-right objeto" id="bloque7">
+                    <img src="images/icon-task.png" width="80" alt="">
+                </div>
+                <div class="col-xs-8 col-sm-9 col-md-6 objeto" id="bloque8">
+                    <p class="line4">Ingresa al paciente de inmediato al área designada de dolor torácico.</p>
+                </div>                    
+                
+                 <div class="clearfix"></div>                  
+                
+                <div class="col-xs-4 col-sm-3 col-md-2 text-right objeto" id="bloque9">
+                    <img src="images/icon-care.png" width="80" alt="">
+                </div>
+                <div class="col-xs-8 col-sm-9 col-md-6 objeto" id="bloque10">
+                    <p class="line4">Activa la alerta roja del Código infarto establecida en la Unidad.</p>
+                </div>
+                
+                 <div class="clearfix"></div>
+                
+                <div class="col-xs-4 col-sm-3 col-md-2 text-right objeto" id="bloque11">
+                    <img src="images/icon-move.png" width="80" alt="">
+                </div>
+                <div class="col-xs-8 col-sm-9 col-md-6 objeto" id="bloque12">
+                    <p class="line4">Ordena se realice la toma de electrocardiograma (ECG 12 derivaciones).</p>
+                </div>
+                
+                <div class="clearfix"></div>
+                
+                <div class="col-xs-4 col-sm-3 col-md-2 text-right objeto" id="bloque13">
+                    <img src="images/icon-healt.png" width="80" alt="">
+                </div>
+                <div class="col-xs-8 col-sm-9 col-md-6 objeto" id="bloque14">
+                    <p class="line4">Realiza enlace con el médico y enfermera asignados al Código infarto en la sala de urgencias para el proceso entrega-recepción del paciente.</p>
+                </div>
+                
+                 <div class="clearfix"></div>
+                       
+                <div class="col-xs-4 col-sm-3 col-md-2 text-right objeto" id="bloque15">
+                    <img src="images/icon-blood.png" width="80" alt="">
+                </div>
+                <div class="col-xs-8 col-sm-9 col-md-6 objeto" id="bloque16">
+                    <p class="line4">Informa al familiar o acompañante sobre la gravedad del paciente y el área en donde recibirá atención médica. </p>
+                </div>
+                
+                     <div class="clearfix"></div>
+                </div>
+    
+			</div>
+        </div>  
+    </div>  
+      <br><br>
+      
+  	<script>
+        
+    var bloques = 16;
+    $(document).ready(function(){
+            for (i = 1; i <= bloques; i++) { 
+                TweenMax.fromTo($("#bloque"+i),1,{alpha:0},{alpha:1, ease:Quart.easeOut, delay:1+(i*.3)});
+            }
+        });
+    </script>
+
+  </body>
+</html>

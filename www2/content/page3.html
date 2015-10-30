@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/TweenMax.min.js"></script>
+      
+    <title>Page 3</title>
+
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.css" rel="stylesheet">
+    <link href="css/style_general.css" rel="stylesheet">
+    <link href="css/style_page3.css" rel="stylesheet">
+
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700|Source+Sans+Pro:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body class="bg2" onresize="location.reload()">  
+    <div class="page">
+        <div class="corrector">
+            <div class="container pag3">      
+                <div class="row">
+                    <div class="col-md-2">
+                    </div>
+                    <div class="col-xs-12 col-sm-3 col-md-2 ">
+                        <div class="imagen objeto" id="bloque1">
+                            <img src="images/heart-hands.png" width="200" alt="">
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-8 col-md-6">
+                        <h3 class="line1 objeto" id="bloque2">Contextualización</h3>
+					   <p class="line3 objeto" id="bloque3">Implementar el Código infarto es útil como guía para que el servicio de Urgencias o Admisión Continua se organice, en lo referente al trabajo en equipo, de manera coordinada y con base en los protocolos científicos reconocidos. Además, sirve para complementar la normativa del procedimiento para la atención médica del paciente en dicho servicio, en las Unidades Médicas Hospitalarias de Segundo y Tercer Nivel de Atención, con el objetivo de garantizar la atención adecuada y oportuna todos los días del año, con personal asignado para los tres turnos; esto permitirá evitar duplicación de acciones y retrasos innecesarios en la atención médica de los pacientes con IAMCEST.</p>
+				    </div>
+                </div>
+            </div>
+        </div>
+    </div>  
+      
+      
+  	<script>
+    $(document).ready(function(){
+        console.log("leyó");
+        TweenMax.fromTo($("#bloque1"),1,{alpha:0},{alpha:1, ease:Quart.easeOut, delay:1});
+        TweenMax.fromTo($("#bloque2"),1,{alpha:0},{alpha:1, ease:Elastic.easeOut, delay:1.4});
+        TweenMax.fromTo($("#bloque3"),1,{alpha:0},{alpha:1, ease:Cubic.easeOut, delay:1.8});
+    });
+    </script>
+  </body>
+</html>

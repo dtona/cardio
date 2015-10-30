@@ -1,0 +1,71 @@
+.line1{
+    text-align: center;
+    font-family: Montserrat, sans-serif;
+    color: #56b7ff;
+}
+
+.line2{
+    text-align: center;
+    font-family: Montserrat, sans-serif;
+    color: #FFF;
+}
+.line3{
+    text-align: justify;
+    font-family: Montserrat, sans-serif;
+    color: #FFF;
+    font-size: 1.1em;
+}
+.imagen{
+    text-align: center;
+}
+.imagen img{
+    width: 20%;
+}
+.page{
+   
+}
+@media (min-width: 480px) {
+    .imagen img{
+        width: 5%;
+    }
+    .page{
+        margin-top: 50px;
+        margin-bottom: 20px;
+        height: 70%
+    }
+}
+@media (min-width: 600px) {
+    .imagen img{
+    width: 7%;
+    margin-top: 15px;
+    }
+}
+@media (min-width: 768px) {
+    .imagen img{
+        width: 80%;
+    }
+}
+@media (min-width: 992px) {
+    .text1{
+        font-size: 1em;
+    }
+    .page{
+        overflow: hidden;
+    }
+}
+@media (min-width: 1200px) {
+    .imagen img{
+    width: 100%;
+    }
+}
+body{
+    background-color: #F4F4F4;
+}
+
+.bg2{
+    background: url(../images/bg2.png) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}

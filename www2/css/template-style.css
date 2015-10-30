@@ -1,0 +1,160 @@
+body, html{
+    /*overflow: hidden;*/
+}
+.menuHor{
+    display: none;
+}
+body{
+    background: transparent;
+}
+#template-up{
+    position: fixed;
+    z-index: 50;
+    background-color: #FFF;
+    width: 100%;
+    height: 40px;
+    box-shadow: 0px 0px 5px #000;
+}
+#template-down{
+    background-color: #fea332 !important;
+    height: 36px;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    bottom: 0;
+}
+#content{
+    background-color: transparent;
+    width: 100%;
+    z-index: 1;
+    /*height: 100%;
+    overflow:scroll;*/
+}
+#com{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    overflow:scroll;
+}
+#btnMenu{
+    margin: 3px 0 0 0;
+    float: right;
+}
+#btnPrev, #btnNext{
+    float: right;
+    margin: 2px 0 0 0;
+}
+#btnPrev{
+    float: left;
+}
+#course_logo{
+    height: 100%;
+}
+.logo{
+    height: 36px;
+    float: left;
+    margin-top: 3px;
+}
+.btn-nav{
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    padding: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 22px;
+    color: #ffffff !important;
+    background-color: #fe8d0d !important;
+    width: 32px;
+    height: 32px;
+}
+.modal-content{
+    background-color: #fea332 !important;
+}
+.modal-footer{
+    background-color: #FFF;
+}
+.modal-header{
+    background-color: #FFF;
+    padding-bottom: 4px;
+    align-content: center;
+    text-align: center;
+}
+#menuLabel{
+    height: 32px;
+    padding: 0;
+    margin: 0;
+    
+}
+.btn-nav:hover{
+    box-shadow:0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19)
+}
+@media (min-width: 480px) {
+}
+@media (min-width: 600px) {
+    #template-up{
+        height: 60px;
+    }
+    #template-down{
+    height: 36px;
+    }
+    .logo{
+        margin-top: 5px;
+        height: 48px;
+    }
+    #btnPrev, #btnNext{
+    
+    }
+    #btnMenu{
+        margin-top: 12px;
+    }
+}
+@media (min-width: 768px) {
+    #template-down{
+        height: 48px;
+    }
+    #btnPrev, #btnNext{
+        margin-top: 3px;
+    }
+    .btn-nav{
+        height: 42px;
+        width: 42px;
+        font-size: 28px;
+    }
+}
+@media (min-width: 992px) {
+    #template-up{
+        height: 80px;
+    } 
+    #template-down{
+        height: 60px;
+        box-shadow: 0px 0px 5px #000;
+    }
+    .logo{
+        margin-top: 10px;
+        height: 60px;
+    }
+    #btnMenu{
+        margin-top: 20px;
+        margin-left: 10px;
+        padding: 10px;
+    }
+    #btnPrev, #btnNext{
+        margin-top: 2px;
+        margin-left: 10px;
+        padding: 10px;
+    }
+    #btnPrev{
+        float: right;
+    }
+    .btn-nav{
+        width: 56px;
+        height: 56px;
+        font-size: 24px;
+    }
+}
+@media (min-width: 1200px) {
+}
